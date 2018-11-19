@@ -1,0 +1,61 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "max-len": ["error", { "code": 128 }],
+    "linebreak-style": "off",
+    "no-shadow": "off",
+    "class-methods-use-this": "off",
+    "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
+    "no-plusplus": "off",
+    "no-undef": "off",
+    "no-nested-ternary": "off",
+    "no-unused-expressions": "off",
+    "no-new": "off",
+    "consistent-return": "off",
+    "no-restricted-syntax": [
+      "error",
+      "ForOfStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "arrow-body-style": "off",
+    "no-eval": "off",
+    "no-loop-func": "off",
+    "no-param-reassign": "off",
+    "no-mixed-operators": "off",
+    "import/prefer-default-export": "off",
+    "react/no-danger": "off",
+    "react/prop-types": "off",
+    "react/prefer-stateless-function": "off",
+    "react/no-array-index-key": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/forbid-prop-types": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }]
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "globals": {
+    "window": true
+  },
+  "settings": {
+  "import/resolver": {
+      "webpack": {
+        "config": "client/builder/webpack/dev.js"
+      }
+    }
+  }
+}
