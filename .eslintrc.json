@@ -52,10 +52,5 @@
     "window": true
   },
   "settings": {
-  "import/resolver": {
-      "webpack": {
-        "config": "client/builder/webpack/dev.js"
-      }
-    }
   }
 }
