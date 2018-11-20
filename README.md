@@ -12,7 +12,7 @@ thisIsBlock-thisIsElement_justModificator
 Все что можно реиспользовать (цвета, размеры шрифтов) , а так же z-index выносим в файл с переменными:  
 src/assets/styles/variables.scss
 
-# Комопненты
+# Компоненты
 
 -Каждый компонент в папке со своим названием в которой лежат index.jsx и index.scss.
 
