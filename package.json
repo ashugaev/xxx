@@ -53,6 +53,17 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "3.6.3"
   },
+  "config": {
+    "commit-message-validator": {
+      "pattern": "^(.+\\s\\|\\s)?(fix|feat|build|ci|chore|docs|perf|refactor|revert|style|test)(\\(.+\\))?:\\s.*",
+      "errorMessage": "================= \n Коммит не соответствует шаблону! \n\n ПРИМЕР: style(Header): изменил паддинги \n МОЖНО БЕЗ SCOPE: feat: сверстал кнопочку \n\n Типы изменений: \n fix - A bug Fix \n build - Changes that affect the build system or external dependencies \n ci - Changes to our CI configuration files and scripts \n chore - Other changes that don't modify src or test files \n docs - Documentation only changes \n feat - A new feature \n perf - A code change that improves performance \n refactor - A code change that neither fixes a bug nor adds a featur \n revert - Reverts a previous commit \n style - Changes that do not affect the meaning of the code \n test - Adding missing tests or correcting existing tests \n\n Для отмены валидации добавить: --no-verify \n================="
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commit-message-validator"
+    }
+  },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
@@ -115,8 +126,10 @@
     ]
   },
   "devDependencies": {
+    "commit-message-validator": "^0.1.6",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-import-resolver-webpack": "^0.10.1",
+    "husky": "^1.1.4",
     "node-sass": "^4.10.0",
     "stylelint": "^9.8.0",
     "stylelint-config-standard": "^18.2.0"
